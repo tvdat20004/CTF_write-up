@@ -59,4 +59,4 @@ phi = (p-1)*(q-1)
 print(long_to_bytes(pow(ct,pow(65537,-1,phi),n)))
 ```
 Kết quả: 
-![](https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_c9b637f82a70535136e91138c6c0b3c7.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1683602760&Signature=xvQUPsiDPTPzcz8L6d7ZnR44wik%3D)
+![](https://hackmd.io/_uploads/r1nDlh8E2.png)
