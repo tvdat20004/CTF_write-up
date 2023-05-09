@@ -23,11 +23,9 @@ hint: 46120075882845013145421014380075239012060478870285044662667750886019520256
 ct: 8300471686897645926578017317669008715657023063758326776858584536715934138214945634323122846623068419230274473129224549308720801900902282047728570866212721492776095667521172972075671434379851908665193507551179353494082306227364627107561955072596424518466905164461036060360232934285662592773679335020824318918
 """
 ```
-- Nhìn vào code, ta thấy đề bài không cho `n = p*q` như các bài RSA thường thấy, thay vào đó lại cho giá trị `hint = 4p^2 + q^2`. Mặt khác, giá trị hint là số nguyên tố nên ta sẽ liên tưởng đến "Định lý Fermat về tổng của hai số chính phương", định lý này phát biểu:
+- Nhìn vào code, ta thấy đề bài không cho `n = p*q` như các bài RSA thường thấy, thay vào đó lại cho giá trị `hint = 4*p*p + q*q`. Mặt khác, giá trị hint là số nguyên tố nên ta sẽ liên tưởng đến "Định lý Fermat về tổng của hai số chính phương", định lý này phát biểu:
 "Một số nguyên tố biểu diễn được dưới dạng tổng 2 số chính phương khi và chỉ khi số nguyên tố đó đồng dư với 1 modulo 4".
-- Có một thuật toán khá hiệu quả để biểu diễn số nguyên tố dạng p = 4k+1 thành tổng 2 số chính phương, chi tiết như sau:
--- Tìm số x thỏa mãn $x^2 \equiv -1\text{ (mod n)}$. Ta làm được việc đó bằng cách tìm một [Quadratic non-residue](https://en.wikipedia.org/wiki/Quadratic_residue) theo modulo p (a là một Quadratic non-residue mod p khi và chỉ khi $a^{\frac{p-1}{2}} \equiv -1 \text{ (mod p)}$), gọi là q, khi đó $x = a^{\frac{p-1}{4}}\text{ (mod p)}$.
--- Áp dụng thuật toán Euclid để tìm UCLN của 2 số với 2 số p và x. Lấy 2 số dư đầu tiên mà nhỏ hơn căn bậc 2 của p, gọi là a và b. Khi đó $a^2 + b^2 = p$
+- Có một thuật toán khá hiệu quả để biểu diễn số nguyên tố dạng p = 4k+1 thành tổng 2 số chính phương, chi tiết như sau: Tìm số x thỏa mãn $x^2 \equiv -1\text{ (mod n)}$. Ta làm được việc đó bằng cách tìm một [Quadratic non-residue](https://en.wikipedia.org/wiki/Quadratic_residue) theo modulo p (a là một Quadratic non-residue mod p khi và chỉ khi $a^{\frac{p-1}{2}} \equiv -1 \text{ (mod p)}$), gọi là q, khi đó $x = a^{\frac{p-1}{4}}\text{ (mod p)}$. Áp dụng thuật toán Euclid để tìm UCLN của 2 số với 2 số p và x. Lấy 2 số dư đầu tiên mà nhỏ hơn căn bậc 2 của p, gọi là a và b. Khi đó $a^2 + b^2 = p$
 - Trở lại bài toán, sau khi áp dụng thuật toán tên, ta tìm được 2 số, khi đó số chẵn chính là 2p, số lẻ chình là q. Có p và q, công việc còn lại trở nên rất nhẹ nhàng phải không nào ^^
 - Sau đây là source code giải mã:
 ``` python
