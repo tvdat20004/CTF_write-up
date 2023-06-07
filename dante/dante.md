@@ -84,7 +84,7 @@ $A = \begin{bmatrix}
  1&  1&  1&  ...&  1& 
 ct\end{bmatrix}$
 - Sau đó dùng sử dụng phương thức `LLL()` trên ma trận đó và kiểm tra từng dòng ma trận để tìm dòng có trị tuyệt đối mỗi thành phần không quá 1. Đặt dòng tìm được là một vector u, sau đó ta tìm vector v sao cho u = v.A => v = u.$A^{-1}$. 
-Ps: Đừng hỏi mình tại sao, vì nó là như vậy đó :( 
+> Ps: Đừng hỏi mình tại sao, vì nó là như vậy đó :( 
 - Source code:
 ``` python
 # from sage.numerical.knapsack import Superincreasing
