@@ -6,7 +6,6 @@ roots = []
 P.<x> = PolynomialRing(Zmod(N), implementation='NTL')
 from Crypto.Util.number import bytes_to_long, long_to_bytes
 while len(roots) == 0:
-	print(1)
 	msg += b'\x00'
 	m = bytes_to_long(msg)
 	pol = (m + x)^e - ct
