@@ -26,5 +26,3 @@ for word in msg:
         else: encoded += letter
 
 print(encoded)
-# abcdebefgchijhekclijmjbnechehoplfieqremmcdesakethjksimbchducdesmijashqcqsaaepehifbcshievijaigemcrebchducdebjhdehjudgijasbbjhemgeeijpmjchqigehkeojuhiigejoouppehoemjaecogbeiiepimsbbedcbijjkhwumijhedushecfsdshxyz
-# next is quipqiup's job 
