@@ -31,5 +31,6 @@ for word in mess:
 			i += 1
 
 print(dec)
-
-
+# abcdebefgchijhekclijmjbnechehoplfieqremmcdesakethjksimbchducdesmijashqcqsaaepehifbcshievijaigemcrebchducdebjhdehjudgijasbbjhemgeeijpmjchqigehkeojuhiigejoouppehoemjaecogbeiiepimsbbedcbijjkhwumijhedushecfsdshxyz
+# next is quipqiup's job 
+# flag{elephant}
