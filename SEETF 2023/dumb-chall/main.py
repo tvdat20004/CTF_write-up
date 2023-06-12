@@ -23,7 +23,7 @@ def generate_random_boolean() -> bool:
 
 def first_verify(g, p, y, C, w, r) -> bool:
     assert w
-    return ((y * C) % p) == pow(g, , p) = 1
+    return ((y * C) % p) == pow(g, r, p)
 
 
 def second_verify(g, p, y, C, w, r) -> bool:
