@@ -103,11 +103,11 @@ if __name__ == '__main__':
     - Dùng `primes_arr` làm private key để mã hóa RSA, ghi kết quả mã hóa vào file `flag.txt` và export public key ra file `public.pem`.
 - Để làm bài trên, ta phải tìm được 3 số m,n,c trong LCG, từ 6 số trong file `dump.txt`
 - Tìm n: Giả sử 6 số trong `dump.txt` là x0 tới x5, ta có:
-     \begin{cases} x1 \equiv (x0.m + c)\text{(mod n)} \\ x2 \equiv (x1.m + c)\text{(mod n)} \\ x3 \equiv (x2.m + c)\text{(mod n)}\end{cases}
-    $\Rightarrow  \begin{cases} (x2 - x1) \equiv  m(x1 - x0) (mod \ n)  \\ (x3 - x2)  \equiv  m(x2 - x1) (mod \ n) \end{cases}  \Rightarrow  (x2-x1)^2 - (x1-x0)(x3-x2)  \equiv 0 (mod \ n)$
+    $\begin{cases} x1 \equiv (x0.m + c)\text{(mod n)} \\ x2 \equiv (x1.m + c)\text{(mod n)} \\ x3 \equiv (x2.m + c)\text{(mod n)}\end{cases}$
+    $\Rightarrow \begin{cases} (x2 - x1) \equiv  m(x1 - x0) (mod \ n)  \\ (x3 - x2)  \equiv  m(x2 - x1) (mod \ n) \end{cases}  \Rightarrow  (x2-x1)^2 - (x1-x0)(x3-x2)  \equiv 0 (mod \ n)$
     $\Rightarrow (x2 - x1)^2 - (x3 - x2)(x1 - x0) = kn$ 
     Tương tự: $(x4 - x3)^2 - (x3 - x2)(x5 - x4) = tn$
-    Do đó n là ước chung của 2 số trên, do đó n là ước của gcd 2 số trên.
+    Do đó n là ước của gcd 2 số trên.
     Ở bài này ta may mắn tìm được luôn n là gcd 2 số đó.
 - Tìm m: Vì $(x2 - x1) \equiv  m * (x1 - x0) (mod \ n)$ nên $m = (x2-x1).(x1-x0)^{-1} (mod \ n)$
 - Tìm c: Vì $x1 \equiv (x0*m + c)\text{(mod n)}$ nên $c = x1 - m.x0  \ (mod \ n)$
@@ -285,3 +285,4 @@ print(flag)
 # b'I have a sweet flag for you: CTF{w0W_c0Nt1nUed_fr4Ct10ns_suR3_Ar3_fUn_Huh}'
 ```
 - Flag: CTF{w0W_c0Nt1nUed_fr4Ct10ns_suR3_Ar3_fUn_Huh}
+WU bản đẹp: https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/Symscu__n
