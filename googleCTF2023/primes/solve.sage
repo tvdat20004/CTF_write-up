@@ -19,16 +19,16 @@ print(len(p))
 known_text = b'I have a sweet flag for you: CTF{'
 k = prod_exp(p,q,to_bits(known_text))
 
-rest = x * pow(int(k),-1,q)
+tmp = x * pow(int(k),-1,q)
 bit = ""
 maxx = prod(p[len(known_text)*7:])
 
-# print((int(maxx) - int(rest))//q)
-t = maxx * pow(rest,-1,q)
+# print((int(maxx) - int(tmp))//q)
+t = maxx * pow(tmp,-1,q)
 assert int(maxx) % int(t) == 0 
 ct = int(maxx) // int(t)
 assert int(ct) * int(k) % q == x
-assert (int(rest) - int(ct)) % q == 0
+assert (int(tmp) - int(ct)) % q == 0
 for i in p[len(known_text) * 7:]:
 	if int(ct) % int(i) == 0:
 		bit += '1'
