@@ -285,4 +285,4 @@ print(flag)
 # b'I have a sweet flag for you: CTF{w0W_c0Nt1nUed_fr4Ct10ns_suR3_Ar3_fUn_Huh}'
 ```
 - Flag: CTF{w0W_c0Nt1nUed_fr4Ct10ns_suR3_Ar3_fUn_Huh}
-WU bản đẹp: https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/Symscu__n
+> WU bản đẹp: https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/Symscu__n
