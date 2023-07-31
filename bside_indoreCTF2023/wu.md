@@ -118,3 +118,4 @@ print(long_to_bytes(m))
 
 ```
 - Flag: `BSidesIndore{yOu_5hou1D_7ry_S0M3ThIn9_elSe_o7h3r_TH4n_lcg}`
+> https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/r1AOQWVo3
