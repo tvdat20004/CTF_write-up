@@ -128,3 +128,4 @@ print(long_to_bytes(flag))
 # b'kN4ps4ck_w_l0w_d3NS1ty'
 ```
 - Flag: DANTE{kN4ps4ck_w_l0w_d3NS1ty}
+> https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/Sy68rzR82
