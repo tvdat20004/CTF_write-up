@@ -84,3 +84,4 @@ print(pt)
 Kết quả: 
 ![](https://github.com/tvdat20004/CTF_write-up/blob/main/hcmus/falsehood/ans.png)
 HCMUS-CTF{just_because_you're_correct_doesn't_mean_you're_right}
+> https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/HJ7HXJ3Vn
