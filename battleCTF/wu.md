@@ -104,4 +104,5 @@ for o in Output:
 print(flag)
 # battleCTF{Maths_W1th_Gauss_0x0x0x}
 - Flag:`battleCTF{Maths_W1th_Gauss_0x0x0x}`
+```
 > https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/SJ139e1th
