@@ -239,3 +239,4 @@ print(long_to_bytes(pow(c,pow(e,-1,phi),n)))
 # b'SEE{0dd_3vEN:deadbeef}'
 ```
 - Flag: SEE{0dd_3vEN:deadbeef}
+> https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/SkLsfJHvh
