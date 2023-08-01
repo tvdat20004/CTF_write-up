@@ -194,3 +194,4 @@ print(flag)
 r.close()
 ```
 ![](https://github.com/tvdat20004/CTF_write-up/blob/main/zer0ptsCTF/squarerng/Screenshot%202023-07-15%20164438.png)
+> https://hackmd.io/@GNF6eq5FT3W48I2WRj0Wlg/r1J55fG9h
