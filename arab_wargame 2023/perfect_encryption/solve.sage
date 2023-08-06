@@ -21,3 +21,4 @@ v = vector([c1,c2])
 x,y = coeff \ v
 assert a1*x + b1*y == c1 and a2*x + b2*y == c2
 print(long_to_bytes(int(y/x)))
+# b'ASCWG{4tt@ck_7h3_Id3@l_w0RlD_0f_Gr0e6N2r$$}'
