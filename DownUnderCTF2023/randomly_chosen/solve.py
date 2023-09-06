@@ -20,3 +20,4 @@ for seed in range(1337):
 	flag = reverse_suffle(seed)
 	if 'DUCTF{' in flag:
 		print(flag)
+# DUCTF{is_r4nd0mn3ss_d3t3rm1n1st1c?_cba67ea78f19bcaefd9068f1a}
