@@ -10,3 +10,4 @@ for factor in divisors(n):
 		print(flag1 + flag2)
 		print(flag2 + flag1)
 		break
+# DUCTF{is_1nt3ger_f4ct0r1s4t10n_h4rd?}
