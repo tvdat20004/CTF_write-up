@@ -4,7 +4,7 @@
 ![](https://hackmd.io/_uploads/BkgLw0sba.png)
 
 - Source:
-```python=
+```python
 #!/usr/bin/env python
 #hacklu23 Baby Crypyo Challenge
 import math
@@ -95,7 +95,7 @@ if __name__ == "__main__":
 ![](https://hackmd.io/_uploads/S12jnCi-T.png)
 - Ồ, vậy ngon rồi :D, vậy ta chỉ cần tìm số t thỏa 3 điều kiện (1),(2),(3) (do t <= 42 nên chỉ cần brute-force), sau đó tính $s = 2^{t-1}.(2^t -1)$ rồi gởi lên server thôi :v 
 - Solve.py
-```python=
+```python
 from pwn import *
 import base64
 from Crypto.Util.number import isPrime
