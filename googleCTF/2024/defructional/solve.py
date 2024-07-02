@@ -1,29 +1,33 @@
-from pwn import xor
-from Crypto.Cipher import DES3
-mask = b'\xff'*24
+from pwn import *
+from tqdm import tqdm
+from Crypto.Util.number import *
+from collections import Counter
 
-# pt = bytes.fromhex("123456ABCD132536")
-# key = bytes.fromhex("2ABB09182736CCDD")
-import os 
-pt = os.urandom(8)
-key = os.urandom(24)
-cipher = DES3.new(key, DES3.MODE_ECB)
-cipher1 = DES3.new(xor(mask, key), DES3.MODE_ECB)
-pt1 = cipher.encrypt(pt)
-pt2 = cipher1.encrypt(xor(mask[:8], pt))
-print(xor(pt1, pt2))
+def get_challenge():
+    io.sendlineafter(b"flag\n", b"1")
+    return bytes.fromhex(io.recvline().strip().decode())
 
+def decrypt(ct):
+    io.sendlineafter(b"flag\n", b"2")
+    io.sendlineafter(b"(hex) ct: ", ct.hex().encode())
+    return bytes.fromhex(io.recvline().strip().decode())
 
+def bitwise_complement(x, nbits=64):
+    return x ^ (2**nbits - 1)
 
+if __name__ == "__main__":
+    io = remote("desfunctional.2024.ctfcompetition.com", 1337)
 
-# import random
-# flipped_bits = set(range(0, 192, 8))
-# for i in range(128):
-#     if len(flipped_bits) == 192:
-#         flipped_bits = set(range(0, 192, 8))
-#     remaining = list(set(range(192)) - flipped_bits)
-#     num_flips = random.randint(1, len(remaining))
-#     flipped_bits = flipped_bits.union(random.choices(remaining, k=num_flips))
-#     # print(192 - len(flipped_bits))
-#     if 192 - len(flipped_bits) == 1:
-#         print(1)
+    enc  = get_challenge()
+    decs = []
+    for _ in tqdm(range(128)):
+        x = decrypt(long_to_bytes(bitwise_complement(bytes_to_long(enc), 64*8)))
+        decs.append(x)
+   	
+    ctr  = Counter(decs)
+    cc   = ctr.most_common(1)[0][0]
+    ans  = long_to_bytes(bitwise_complement(bytes_to_long(cc[:8]))) + cc[8:]
+
+    io.sendlineafter(b"flag\n", b"3")
+    io.sendlineafter(b"pt: ", ans.hex().encode())
+    io.interactive()
