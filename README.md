@@ -1,4 +1,5 @@
-# CTF_write-up
-Some crypto challenges I have solved, there are solutions and may be write-up if I'm not lazy :b
+# CTF write-up
+Some CTF challenges from CTF events and wargames I have solved.
 
-https://hackmd.io/@tvdat20004
+- https://hackmd.io/@tvdat20004
+- Blog: https://tvdat20004.github.io/
