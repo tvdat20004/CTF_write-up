@@ -1,0 +1,4 @@
+*.sage.py
+__MACOSX/
+__pycache__/
+*.pyc
