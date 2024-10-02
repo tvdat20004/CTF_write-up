@@ -3,7 +3,7 @@ from Crypto.Util.number import long_to_bytes
 from tqdm import trange
 import threading
 # r = process(["python3", "server.py"])
-r = remote("94.237.54.65", 54301)
+r = remote("83.136.255.40", 53718)
 
 # flagbin_len = 214 
 flagbin_len = 470
