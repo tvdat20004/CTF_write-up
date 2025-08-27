@@ -1,0 +1,23 @@
+{
+	"name": "pokevault",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "ts-node --transpile-only src/app.ts",
+		"dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"ejs": "^3.1.10",
+		"express": "^5.1.0",
+		"secp256k1": "^5.0.1"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.19",
+		"@types/ejs": "^3.1.5",
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.3.0",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.9.2"
+	}
+}

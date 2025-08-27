@@ -1,0 +1,9 @@
+services:
+    pokevault-app:
+        build: .
+        container_name: pokevault-platform
+        ports:
+            - "25001:25001"
+        environment:
+            - FLAG=DDC{FAKE_FLAG_FAKE_FLAG}
+        restart: unless-stopped
